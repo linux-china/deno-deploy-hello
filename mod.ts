@@ -1,6 +1,7 @@
 addEventListener("fetch", (event: Event) => {
-  const response = new Response("Hello Leijuan!", {
-    headers: { "content-type": "text/plain" },
-  });
-  (event as FetchEvent).respondWith(response);
+    const fetchEvent = event as FetchEvent;
+    const response = new Response("Hello Leijuan!!", {
+        headers: {"content-type": "text/plain"},
+    });
+    fetchEvent.respondWith(response);
 });
